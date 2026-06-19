@@ -5,7 +5,9 @@ from langchain_openai import ChatOpenAI
 from langgraph.checkpoint.memory import MemorySaver
 from typing import List
 from langgraph.graph.message import add_messages
+from dotenv import load_dotenv
 
+load_dotenv()
 
 class ChatState(TypedDict):
     messages: Annotated[List[BaseMessage], add_messages]
